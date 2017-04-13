@@ -519,11 +519,18 @@
                 <div class="bs-calltoaction bs-calltoaction-success">
                     <div class="row">
                         <div class="col-md-9 cta-contents">
-                            <h1 class="cta-title">Its a Call To Action</h1>
+                            <h1 class="cta-title">Step4. Create Database By phpMysql</h1>
                             <div class="cta-desc">
-                                <p>Describe the action here.</p>
-                                <p>Describe the action here.</p>
-                                <p>Describe the action here.</p>
+                                <h3>1. การเปิด phpMyAdmin </h3>
+                                <p>เปิด XAMPP Control Panel ขึ้นมาแล้วคลิก  Start->MySQL เพื่อใช้สร้าง Database</p>
+                                <h3>2. เข้าสู่ phpMyAdmin </h3>
+                                <p>ให้คลิก  Admin->MySQL เพื่อเข้าสู้หน้าหลัก phpMyAdmin</p>
+                                <h3>3. สร้าง database</h3>
+                                <p>ให้คลิก new เพื่อสร้าง database แล้วใส่ชื่อ database name ว่า store เสร็จแล้วคลิก create  </p>
+                                <h3>4. ดาวน์โหลดไฟล์ database แล้ว import</h3>
+                                <p>ดาวน์โหลดไฟล์ <a href="https://goo.gl/rk4fX5" >คลิกที่นี้</a></p>
+                                <h3>5. ทำการ import</h3>
+                                <p>ไปที่ phpMyAdmin คลิกเลือก Database store คลิก import คลิก Browse แล้วเลือกไฟล์ที่ดาวน์โหลด แล้วคลิก open เสร็จแล้วคลิก GO ก็จะได้ตารางข้อมูลใน Database</p>
                             </div>
                         </div>
                         
@@ -533,11 +540,27 @@
                 <div class="bs-calltoaction bs-calltoaction-warning">
                     <div class="row">
                         <div class="col-md-9 cta-contents">
-                            <h1 class="cta-title">Its a Call To Action</h1>
+                            <h1 class="cta-title">Step5. สร้าง Model เพื่อติดต่อกับ Database</h1>
                             <div class="cta-desc">
-                                <p>Describe the action here.</p>
-                                <p>Describe the action here.</p>
-                                <p>Describe the action here.</p>
+                            	<h3>1.ตั้งค่าการเชื่อมต่อ Database </h3>
+                            	<p>เข้าไปที่ C:\xampp\htdocs\SimpleWebApp\application\config เลือกไฟล์ชื่อ database แล้วเปิดขึ้นมาเพื่อตั้งค่า ดังนี้</p>
+                            	<p>'hostname' => 'localhost',</p>
+                            	<p>'username' => 'root',</p>
+                            	<p>'password' => '',</p>
+                            	<p>'database' => 'store',</p>
+                            	<p>เสร็จแล้วกด Save</p>
+                            	<h3>2. สร้าง Model</h3>
+                                <p>สร้างไฟล์ชื่อ Product_Model.php แล้ว Save ไว้ที่ C:\xampp\htdocs\SimpleWebApp\application\models</p>
+                                <h3>พิมพ์โค้ด ดังนี้</h3>
+                                <img src="img/Model.jpg" class="img-responsive" alt="Image">
+                                <h4>อธิบายโค้ด</h4>
+                                <p>บรรทัดที่ 1 เปิดคำสังการทำงาน php</p>
+                                <p>บรรทัดที่ 3-18 เป็น class Product_Model ที่สืบทอดคุณสมบัติ CI_Model </p>
+                                <p>บรรทัดที่ 5-10 เป็นฟังก์ชันการเชื่อมต่อกับเครื่องมือต่างๆ </p>
+                                <p>บรรทัดที่ 8 เป็นการเรียกใช้การเชื่อมต่อ database </p>
+                                <p>บรรทัดที่ 11-16 เป็นฟังก์ชันการร้องขอข้อมูลจาก database</p>
+                                <p>บรรทัดที่ 13 เป็นการตั้งค่าตัวแปรเพื่อร้องขอข้อมูลที่อู่ในตาราง product จาก database</p>
+                                <p>บรรทัดที่ 15 ส่งค่า return ค่าในตัวแปร product</p>
                             </div>
                         </div>
                         
@@ -547,11 +570,21 @@
                 <div class="bs-calltoaction bs-calltoaction-danger">
                     <div class="row">
                         <div class="col-md-9 cta-contents">
-                            <h1 class="cta-title">Its a Call To Action</h1>
+                            <h1 class="cta-title">Step6. สร้าง MVC เพื่อแสดงข้อมูลจาก Database</h1>
                             <div class="cta-desc">
-                                <p>Describe the action here.</p>
-                                <p>Describe the action here.</p>
-                                <p>Describe the action here.</p>
+                            	<h3>1. สร้างฟังก์ชันในการแสดงข้อมูลจาก Database</h3>
+                                <p>เปิดไฟล์ Test_Contorller.php ที่อยู่ใน C:\xampp\htdocs\SimpleWebApp\application\controllers</p>
+                                <h3>2. พิมพ์โค้ด ดังนี้</h3>
+                                <img src="img/ConMVC.jpg" class="img-responsive" alt="Image">
+                                <p>บรรทัดที่ 1 เปิดคำสังการทำงาน php</p>
+                                <p>บรรทัดที่ 9 ทำการเรียกใช้ Product_Model ในการติดต่อ Database</p>
+                                <p>บรรทัดที่ 17 สร้างฟังก์ชันในการแสดงข้อมูลจาก Database</p>
+                                <p>บรรทัดที่ 19 สร้างตัวแปร $data เพื่อับค่าจาก Product_Model ในฟังก์ชัน get_all_product</p>
+                                <p>บรรทัดที่ 20 ทำการเรียกแสดงหน้า View product และส่งข้อมูลผ่านตัวแปร $data</p>
+                                <h3>3. สร้างหน้า View ชื่อว่า product เพื่อแสดงผล </h3>
+                                <h3>4. พิมพ์โค้ด ดังนี้</h3>
+                                <img src="img/V-mvc.jpg" class="img-responsive" alt="Image">
+
                             </div>
                         </div>
                         
