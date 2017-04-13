@@ -148,6 +148,8 @@
     border-color:#fff;
 }
 
+
+
 </style>
 
 <body>
@@ -158,7 +160,7 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="home" onclick=$("#menu-close").click();>GenWebApp</a>
+                <a href="#" onclick=$("#menu-close").click();>GenWebApp</a>
             </li>
             <li>
                 <a href="#top" onclick=$("#menu-close").click();>Home</a>
@@ -275,6 +277,7 @@
                                 </h4>
                                 <p>คุณจะต้องดาวน์โหลด Sublime Text และติดตั้ง Sublime Text ลงบนเครื่องเพื่อใช้ในการเขียนโค้ดที่ง่ายและสะดวกขึ้น.</p>
                                 <br>
+                                <br>
                                 <a href="https://www.sublimetext.com/3" class="btn btn-light">Download</a>
                             </div>
                         </div>
@@ -379,25 +382,24 @@
 
                             </div>
                         </div>
-                        <div class="col-md-3 cta-button">
-                            <a  class="btn btn-lg btn-block btn-default" data-toggle="modal" data-target="#myModal">View Video</a>
+                        
 
 
 
   
 
   <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade" id="model1" role="dialog">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title">Simple Run WebApplication</h4>
         </div>
         <div class="modal-body">
             <div class="text-center">
-                 <p>This is a large modal.</p>
-                    <iframe width="640" height="360" src="https://www.youtube.com/embed/y5KHqaTzOdg" frameborder="0" allowfullscreen></iframe>
+                 <p>Simple Run WebApplication</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OGdtDt9YNdQ" frameborder="0" allowfullscreen></iframe>
                 
             </div>
          
@@ -411,7 +413,7 @@
 
 
 
-                        </div>
+                        
                      </div>
                 </div>
 
@@ -431,31 +433,86 @@
                                     <p>บรรทัดที่ 4 สร้าง Class Test_Contorller และเรียกใช้คุณสมบัติ Contorller (ชื่อ Class ต้องตรงกับชื่อไฟล์)</p>
                                     <p>บรรทัดที่ 7 สร้าง function index เพื่อเรียกใช้ View </p>
                                     <p>บรรทัดที่ 9 เป็นการเรียกใช้หน้า View ที่ชื่อว่า Hello มาแสดง </p>
+                                    <p>เมื่อเสร็จแล้วกด Ctrl+S </p>
                                 <h3>4. สร้างหน้า View เพื่อใช้ในการแสดงหน้าเว็บ</h3>
                                 <p>ให้คลิก File -> Newfile หรือ Ctrl+N  แล้วคลิก File -> Save As หรือ Ctrl+Shift+S ตั้งชื่อไฟล์ Hello.php เลือกที่อยู่ไฟล์ C:\xampp\htdocs\SimpleWebApp\views แล้วคลิก Save</p>
-                                <h3>3.พิมพ์ Code ในการทำงานของหน้า View</h3>
-                                <img src="img/controller.jpg" class="img-responsive" alt="Image">
+                                <h3>5.พิมพ์ Code ในการทำงานของหน้า View</h3>
+                                <img src="img/View.jpg" class="img-responsive" alt="Image">
+                                <h4>อธิบายโค้ด</h4>
+                                    <p>บรรทัดที่ 1-2 ทำการเปิดโค้ด html เพื่อให้คำสั่งทำงาน</p>
+                                    <p>บรรทัดที่ 3-18 ตั้งค่าการเชื่อมต่อ API และกำหนดค่าการแสดงหน้า View</p>
+                                    <p>บรรทัดที่ 19-28 ส่วนหน้าจอแสดงผลลัพธ์ </p>
+                                    <p>บรรทัดที่ 20 ประกาศตัวอักษรให้แสดง HelloWorld! </p>
+                                    <p>บรรทัดที่ 29 ปิดการคำสั่ง </p>
+                                    <span class="glyphicon glyphicon-exclamation-sign ">Tip</span>
+                                    <p>คีย์ลัดในการสร้างหน้า View กด Ctrl+Shift+P แล้วพิมพ์ bs3-html5-template แล้วกด Enter </p>
+                                    <p>เมื่อเสร็จแล้วกด Ctrl+S </p>
+                                    <p>ลอง Run การเรียกใช้หน้า View ของ Controller <a href="http://localhost/SimpleWebApp/index.php/Test_Contorller" class="bg-danger">http://localhost/SimpleWebApp/index.php/Test_Contorller</a> </p>
+                                    <br>
+                                    <br>                                
+                                    <a href="#v1" class="btn btn-dark btn-lg">ดูวีดีโอตัวอย่าง</a>                                                               
                             </div>
                         </div>
-                        <div class="col-md-3 cta-button">
-                            <a href="#" class="btn btn-lg btn-block btn-primary">Go for It!</a>
-                        </div>
+                        
+
+ <!-- Modal -->
+  <div class="modal fade " id="model2" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title ">Create Controller and Veiw</h4>
+        </div>
+        <div class="modal-body bg-primary">
+            <div class="text-center">
+                 <p>Create Controller and Veiw</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZrqYN1wmnAY" frameborder="0" allowfullscreen></iframe>
+                
+            </div>
+         
+        </div>
+        <div class="modal-footer bg-primary">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+                        
                      </div>
                 </div>
 
                 <div class="bs-calltoaction bs-calltoaction-info">
                     <div class="row">
                         <div class="col-md-9 cta-contents">
-                            <h1 class="cta-title">Its a Call To Action</h1>
+                            <h1 class="cta-title">Step3. Create View By Bootstrap</h1>
                             <div class="cta-desc">
-                                <p>Describe the action here.</p>
-                                <p>Describe the action here.</p>
-                                <p>Describe the action here.</p>
+                                <h3>1.Open file Hello.php</h3>
+                                <p>ให้เปิดไฟล์ Hello.php ที่อยู่ไฟล์ C:\xampp\htdocs\SimpleWebApp\views</p>
+                                <h3>2.สร้างเมนูหน้า View แบบง่ายๆ </h3>
+                                <p>ว่างเคอเซอร์ใน body แล้วกด Ctrl+Shift+P แล้วพิมพ์ bs3-navbar-responsive แล้วกด Enter </p>
+                                <img src="img/navbar.jpg" class="img-responsive" alt="Image">
+                                <h3>3. กด Save แล้วทำการรันโปรเจค <a href="http://localhost/SimpleWebApp/index.php/Test_Contorller" class="bg-danger">http://localhost/SimpleWebApp/index.php/Test_Contorller</a> </h3>
+                                <p>เมื่อรันโปรเจคจะได้ผลตามนี้</p>
+                                <img src="img/navbar-responsive.jpg" class="img-responsive" alt="Image">
+                                <h3>4.สร้างภาพสไลด์โชว์ แบบเร่งรีบ</h3>
+                                <p>ว่างเคอเซอร์ใน body ต่อจาก navbar แล้วกด Ctrl+Shift+P แล้วพิมพ์ bs3-carousel แล้วกด Enter</p>
+                                <p>เมื่อรันโปรเจคจะได้ผลตามนี้ <a href="http://localhost/SimpleWebApp/index.php/Test_Contorller" class="bg-danger">http://localhost/SimpleWebApp/index.php/Test_Contorller</a> </p>
+                                <img src="img/carousel.jpg" class="img-responsive" alt="Image">
+                                <h3>5.เปลี่ยนภาพในสไลด์โชว์ </h3>
+                                <p>นำลิงค์ http://hdw7.com/wallpapers/68/bungalows-at-sea-1920x1080.jpg ไปวางใน img src </p>
+                                <img src="img/carousels.jpg" class="img-responsive" alt="Image">
+                                <br>
+                                <p>เมื่อรันโปรเจคจะได้ผลตามนี้ <a href="http://localhost/SimpleWebApp/index.php/Test_Contorller" class="bg-danger">http://localhost/SimpleWebApp/index.php/Test_Contorller</a> </p>
+                                <img src="img/carouself.jpg" class="img-responsive" alt="Image">
+                                <br>
+                                <br>
+                                <a href="#v2" class="btn btn-dark btn-lg">ดูวีดีโอตัวอย่าง</a>                                
                             </div>
                         </div>
-                        <div class="col-md-3 cta-button">
-                            <a href="#" class="btn btn-lg btn-block btn-info">Go for It!</a>
-                        </div>
+                        
                      </div>
                 </div>
 
@@ -469,9 +526,7 @@
                                 <p>Describe the action here.</p>
                             </div>
                         </div>
-                        <div class="col-md-3 cta-button">
-                            <a href="#" class="btn btn-lg btn-block btn-success">Go for It!</a>
-                        </div>
+                        
                      </div>
                 </div>
 
@@ -485,9 +540,7 @@
                                 <p>Describe the action here.</p>
                             </div>
                         </div>
-                        <div class="col-md-3 cta-button">
-                            <a href="#" class="btn btn-lg btn-block btn-warning">Go for It!</a>
-                        </div>
+                        
                      </div>
                 </div>
 
@@ -501,9 +554,7 @@
                                 <p>Describe the action here.</p>
                             </div>
                         </div>
-                        <div class="col-md-3 cta-button">
-                            <a href="#" class="btn btn-lg btn-block btn-danger">Go for It!</a>
-                        </div>
+                        
                      </div>
                 </div>
 
